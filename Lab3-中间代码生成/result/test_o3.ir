@@ -1,0 +1,97 @@
+FUNCTION func1 : 
+PARAM v0
+v1 := #0
+v2 := #2
+v3 := #0
+LABEL label0 : 
+IF v1 >= v2 GOTO label1
+t0 := v1 * #4
+t1 := v0 + t0
+IF *t1 <= v3 GOTO label2
+t2 := v1 * #4
+t3 := v0 + t2
+v3 := *t3
+LABEL label2 : 
+t4 := v1 + #1
+v1 := t4
+GOTO label0
+LABEL label1 : 
+RETURN v3
+FUNCTION func2 : 
+PARAM v4
+PARAM v5
+t5 := v4 / v5
+v6 := t5
+t6 := v6 * v5
+v7 := t6
+t7 := v4 - v7
+v8 := t7
+RETURN v8
+FUNCTION main : 
+v9 := #2
+DEC v10 16
+DEC v11 8
+v12 := #0
+v13 := #0
+LABEL label3 : 
+IF v12 >= v9 GOTO label4
+v13 := #0
+LABEL label5 : 
+IF v13 >= v9 GOTO label6
+t8 := v12 * #8
+t9 := &v10 + t8
+t10 := v13 * #4
+t11 := t9 + t10
+t13 := v12 + v13
+ARG v9 
+ARG t13 
+t12 := CALL func2
+*t11 := t12
+t14 := v13 + #1
+v13 := t14
+GOTO label5
+LABEL label6 : 
+t15 := v12 * #4
+t16 := &v11 + t15
+t18 := v12 * #8
+t19 := &v10 + t18
+ARG t19 
+t17 := CALL func1
+*t16 := t17
+t20 := v12 + #1
+v12 := t20
+GOTO label3
+LABEL label4 : 
+t21 := #0 * #8
+t22 := &v10 + t21
+t23 := #0 * #4
+t24 := t22 + t23
+WRITE *t24
+t25 := #0
+t26 := #0 * #8
+t27 := &v10 + t26
+t28 := #1 * #4
+t29 := t27 + t28
+WRITE *t29
+t30 := #0
+t31 := #1 * #8
+t32 := &v10 + t31
+t33 := #0 * #4
+t34 := t32 + t33
+WRITE *t34
+t35 := #0
+t36 := #1 * #8
+t37 := &v10 + t36
+t38 := #1 * #4
+t39 := t37 + t38
+WRITE *t39
+t40 := #0
+t41 := #0 * #4
+t42 := &v11 + t41
+WRITE *t42
+t43 := #0
+t44 := #1 * #4
+t45 := &v11 + t44
+WRITE *t45
+t46 := #0
+RETURN #0
