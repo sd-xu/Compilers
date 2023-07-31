@@ -1,5 +1,5 @@
 # Compilers
-A compiler written in C.
+A compiler for a small C-like language(C--) written in C.
 
 - 主要参考：https://github.com/Tyler-ytr/Compiler
 
