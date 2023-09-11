@@ -1,7 +1,13 @@
 # Compilers
-A compiler for a small C-like language(C--) written in C.
 
-- 主要参考：https://github.com/Tyler-ytr/Compiler
+A compiler that converts C-- (small C-like Language) source code into MIPS assembly code which can be run on SPIM Simulator.
 
-- Lab1~4分别在前面的基础上完成不同的内容
-- Compiler是Lab1~4整合后的完整编译器
+- "Compiler" integrates lab1~4.
+  - Lab1: lexical and syntax analysis
+  - Lab2: semantic analysis
+  - Lab3: intermediate code generation
+  - Lab4: object code generation
+
+
+
+Main reference: https://github.com/Tyler-ytr/Compiler
